@@ -14,3 +14,18 @@ var titleCase = function(string) {
     });
     return newarray.join(" ");
 };
+
+
+$(document).ready(function() {
+    $("form#title").submit(function(event) {
+
+
+        var title = $("input#title").val();
+        var result = titleCase(title);
+
+        $(".newtitle").text(result);
+
+        $("#result").show();
+        event.preventDefault();
+    });
+});
