@@ -18,4 +18,8 @@ describe("titleCase", function() {
     it("does capitalize the first and last word of the input", function(){
         expect(titleCase("of mice and men and out")).to.equal("Of Mice and Men and Out");
     });
+
+    it("does capitalize shakespear titles", function(){
+        expect(titleCase("to be or, not to be")).to.equal("To Be or, Not to Be");
+    });
 });

@@ -1,26 +1,37 @@
 var titleCase = function(string) {
-    var ignore = ["a", "an", "the", "and", "but", "or", "nor", "at", "by", "for", "from",
-                  "in", "into", "of", "off", "on", "onto", "out", "over", "up", "with", "to", "as"];
+    var ignore = ['A', 'An', 'The', 'And', 'But', 'Or', 'For', 'Nor', 'As', 'At',
+      'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With'];
     var str = string.toLowerCase();
     function toUpper(match){
         return match.toUpperCase();
     };
+
+    function toLower(match){
+        return match.toLowerCase();
+    }
     var newStr = str.replace(/\b\w/g, toUpper);
-    console.log(newStr);
+
+    ignore.forEach(function(word) {
+            newStr = newStr.replace(new RegExp('\\s' + word + '\\b' , 'g'), toLower);
+    });
+
+
     return newStr;
-    // var wordarrays = string.toLowerCase().split(" ");
-    // var newarray = [];
-    // var length = wordarrays.length -1;
-    // wordarrays.forEach(function(wordarray, index) {
-    //     if ((ignore.indexOf(wordarray) !== -1) && (index !== 0) && (index !== length)) {
-    //         newarray.push(wordarray);
-    //     } else {
-    //         wordarray = wordarray.charAt(0).toUpperCase() + wordarray.slice(1);
-    //         newarray.push(wordarray);
-    //     }
-    // });
-    // return newarray.join(" ");
 };
+
+//     // var wordarrays = string.toLowerCase().split(" ");
+//     // var newarray = [];
+//     // var length = wordarrays.length -1;
+//     // wordarrays.forEach(function(wordarray, index) {
+//     //     if ((ignore.indexOf(wordarray) !== -1) && (index !== 0) && (index !== length)) {
+//     //         newarray.push(wordarray);
+//     //     } else {
+//     //         wordarray = wordarray.charAt(0).toUpperCase() + wordarray.slice(1);
+//     //         newarray.push(wordarray);
+//     //     }
+//     // });
+//     // return newarray.join(" ");
+
 
 
 $(document).ready(function() {
