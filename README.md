@@ -1,15 +1,13 @@
-# Name:
-# Date:
+# Name: Evan Butler & Connor Abdelnoor
+# Date: April 7, 2015.
 
-Description:
+Description: Site for taking a string and generating title case.
 
-# SetUp and Use
-In order to use this program you will need a browser...NOT IE!
+##SetUp
+1. Clone repository.
+2. Open html file in web browser.
 
-SetUp
-1.
-
-# Copyright (c) 2015 (Name)
+# Copyright (c) 2015 (Evan Butler & Connor Abdelnoor)
 
 # The MIT License (MIT)
 
