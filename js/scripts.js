@@ -42,16 +42,16 @@ var titleCase = function(string) {
     // });
     // return newarray.join(" ");
 
-
-
 $(document).ready(function() {
+  $("input#title").focus();
     $("form#title").submit(function(event) {
-        var title = $("input#title").val();
-        var result = titleCase(title);
+      event.preventDefault();
+      var title = $("input#title").val();
+      var result = titleCase(title);
 
-        $(".newtitle").text(result);
+      $(".newtitle").text(result);
 
-        $("#result").show();
-        event.preventDefault();
+      $("#result").show();
+      $("form#title").hide();
     });
 });

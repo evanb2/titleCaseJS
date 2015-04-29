@@ -8,19 +8,23 @@
   <title>Title Case</title>
 </head>
 <body>
+  <div class="jumbotron">
+    <h1>MakeTitle</h1>
+    <p>
+      Make your mark with a great title.
+    </p>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1>Title Case Translator</h1>
         <form id="title">
           <div class="form-group">
-            <label for="title">Enter Title: </label>
-            <input id="title" name="title" type="text">
+            <input id="title" name="title" type="text" placeholder="Enter Title" required>
           </div>
           <button type="submit" class="btn">Generate!</button>
         </form>
         <div id="result">
-          <p><span class="newtitle"></span></p>
+          <h4><span class="newtitle"></span></h4>
         </div>
       </div>
     </div>
