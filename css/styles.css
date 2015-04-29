@@ -1,21 +1,4 @@
-h2 {
-  text-align: center;
-  font-family: courier;
-  margin-top: 0px;
-  font-size: 40px;
-  margin-left: 30px;
-}
-
-#maketitle {
-  text-align: center;
-  font-family: courier;
-}
-
-#title {
-  text-align: center;
-  width: 400px;
-}
-
+/*Jumbotron*/
 .jumbotron {
   text-align: center;
   font-family: courier;
@@ -24,12 +7,35 @@ h2 {
   height: 400px;
 }
 
+/*Jumbotron Header*/
+h2 {
+  text-align: center;
+  font-family: courier;
+  margin-top: 0px;
+  font-size: 40px;
+  margin-left: 30px;
+}
+
+/*form group*/
+#maketitle {
+  text-align: center;
+  font-family: courier;
+}
+
+/*form input*/
+#title {
+  text-align: center;
+  width: 400px;
+}
+
+/*Result Display*/
 #result {
   text-align: center;
   padding-top: 30px;
   font-family: courier;
 }
 
+/*Submit Button*/
 .btn {
   font-family: courier;
 }
