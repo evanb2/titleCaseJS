@@ -48,10 +48,7 @@ $(document).ready(function() {
       event.preventDefault();
       var title = $("input#title").val();
       var result = titleCase(title);
-
       $(".newtitle").text(result);
-
       $("#result").show();
-      $("form#title").hide();
     });
 });
