@@ -50,5 +50,6 @@ $(document).ready(function() {
       var result = titleCase(title);
       $(".newtitle").text(result);
       $("#result").show();
+      $("input#title").val("");
     });
 });
