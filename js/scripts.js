@@ -1,7 +1,7 @@
 var titleCase = function(string) {
     //associative array containing all the words to ignore when uppercasing
     var ignore = ['A', 'An', 'The', 'And', 'But', 'Or', 'For', 'Nor', 'As', 'At',
-      'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With'];
+                  'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With'];
 
     //converts entire string to lowercase
     var str = string.toLowerCase();
@@ -22,7 +22,7 @@ var titleCase = function(string) {
     //forEach loop through each word in the ignore array, uses RegExp to lowercase
       //the first letter of the ignored word
     ignore.forEach(function(word) {
-            newStr = newStr.replace(new RegExp('\\s' + word + '\\b' , 'g'), toLower);
+        newStr = newStr.replace(new RegExp('\\s' + word + '\\b' , 'g'), toLower);
     });
 
     return newStr;
@@ -43,13 +43,13 @@ var titleCase = function(string) {
     // return newarray.join(" ");
 
 $(document).ready(function() {
-  $("input#title").focus();
+    $("input#title").focus();
     $("form#title").submit(function(event) {
-      event.preventDefault();
-      var title = $("input#title").val();
-      var result = titleCase(title);
-      $(".newtitle").text(result);
-      $("#result").show();
-      $("input#title").val("");
+        event.preventDefault();
+        var title = $("input#title").val();
+        var result = titleCase(title);
+        $(".newtitle").text(result);
+        $("#result").show();
+        $("input#title").val("");
     });
 });
