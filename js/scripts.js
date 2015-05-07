@@ -44,12 +44,12 @@ var titleCase = function(string) {
 
 $(document).ready(function() {
     $("input#title").focus();
-    $("form#title").submit(function(event) {
-        event.preventDefault();
-        var title = $("input#title").val();
-        var result = titleCase(title);
-        $(".newtitle").text(result);
-        $("#result").show();
-        $("input#title").val("");
-    });
+        $("form#maketitle").submit(function(event) {
+            event.preventDefault();
+            var title = $("input#title").val();
+            var result = titleCase(title);
+            $(".newtitle").text(result);
+            $("#result").show();
+            $("input#title").val("");
+        });
 });
